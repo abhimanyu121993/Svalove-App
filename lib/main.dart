@@ -1,3 +1,6 @@
+import 'dart:async';
+
+import 'package:Svalove_App/thousand_of_doctors.dart';
 import 'package:flutter/material.dart';
 void main(){
   runApp(MaterialApp(
@@ -13,6 +16,17 @@ class main_screen extends StatefulWidget {
 }
 
 class _main_screenState extends State<main_screen> {
+
+  void initState()
+  {
+    super.initState();
+    Timer(Duration(seconds: 5),()async{
+      Navigator.pushReplacement(context, MaterialPageRoute(
+          builder: (context)=>thousand_of_doctors()));
+    });
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,11 +34,14 @@ class _main_screenState extends State<main_screen> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text("Sva Love",
-          style: TextStyle(
-            color: Colors.red
-          ),
-          ),
+          Center(
+            child: Text("Sva Love",
+              style: TextStyle(
+                  color: Colors.red,
+                  fontSize: 32,
+              ),
+            ),
+          )
         ],
       ),
     );
