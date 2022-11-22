@@ -1,4 +1,8 @@
+import 'package:Svalove_App/all_doctors.dart';
 import 'package:Svalove_App/home_page.dart';
+import 'package:Svalove_App/profile_page.dart';
+import 'package:Svalove_App/sva_love_search.dart';
+import 'package:Svalove_App/top_rated_doctors.dart';
 import 'package:flutter/material.dart';
 class bottom_navigation_page extends StatefulWidget {
   const bottom_navigation_page({Key? key}) : super(key: key);
@@ -11,6 +15,10 @@ class _bottom_navigation_pageState extends State<bottom_navigation_page> {
   int selected_index=0;
   List all_page=[
     home_page(),
+    sva_love_search(),
+    all_doctors(),
+    top_rated_doctors(),
+    profile_page(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -33,7 +41,7 @@ class _bottom_navigation_pageState extends State<bottom_navigation_page> {
         },
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
+            icon: Icon(Icons.home),
             label: ""
           ),
           BottomNavigationBarItem(

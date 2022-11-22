@@ -48,9 +48,13 @@ class _sva_love_profileState extends State<sva_love_profile> {
                 Positioned(
                   left: 190,
                     top: 50,
-                    child: IconButton(
-                      onPressed: (){},
-                      icon: Icon(Icons.add,color: Colors.black,size: 33,),
+                    child: Container(
+                      height: 40,
+                      width: 40,
+                      child: IconButton(
+                        onPressed: (){},
+                        icon: Icon(Icons.add,color: Colors.black,size: 33,),
+                      ),
                     )
                 )
               ],

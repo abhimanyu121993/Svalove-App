@@ -35,12 +35,16 @@ class _main_screenState extends State<main_screen> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Center(
-            child: Text("Sva Love",
-              style: TextStyle(
-                  color: Colors.red,
-                  fontSize: 32,
+            child: Container(
+              height: 80,
+              width: 210,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("images/sav_logo.png"),
+                  fit: BoxFit.fill
+                )
               ),
-            ),
+            )
           )
         ],
       ),
